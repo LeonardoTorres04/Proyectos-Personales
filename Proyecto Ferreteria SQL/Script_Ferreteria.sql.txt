@@ -1,0 +1,119 @@
+# Host: localhost  (Version: 5.5.42)
+# Date: 2016-04-17 18:08:52
+# Generator: MySQL-Front 5.3  (Build 4.205)
+
+/*!40101 SET NAMES latin1 */;
+
+#
+# Structure for table "clientes"
+#
+
+DROP TABLE IF EXISTS `clientes`;
+CREATE TABLE `clientes` (
+  `numclie` varchar(40) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `repclie` char(4) NOT NULL,
+  `limitecredito` int(10) NOT NULL,
+  PRIMARY KEY (`numclie`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+#
+# Data for table "clientes"
+#
+
+INSERT INTO `clientes` VALUES ('2101','Luis Garcia Anton','106',65000),('2102','Alvaro Rodriguez ','101',65000),('2103','Jaime Llorens','105',50000),('2105','Antonio Canales','101',45000),('2106','Juan Suarez','102',65000),('2107','Julian Lopez','110',35000),('2108','Julia Antequera','109',55000),('2109','Alberto Juanes','103',25000),('2111','Cristobal Garcia','103',50000),('2112','Maria Silva','108',50000),('2113','Luisa Maron','104',20000),('2114','Cristina Bulini','102',20000),('2115','Vicente Martinez','101',20000),('2117','Carlos Tena','106',35000),('2118','Junipero Alvarez','108',60000),('2119','Salomon Bueno','109',25000),('2120','Juan Malo','102',50000),('2121','Vicente Rios','103',45000),('2122','Jose Marchante','105',30000),('2123','Jose Libros','102',40000),('2124','Juan Bolto','107',40000);
+
+#
+# Structure for table "oficinas"
+#
+
+DROP TABLE IF EXISTS `oficinas`;
+CREATE TABLE `oficinas` (
+  `oficina` char(2) NOT NULL,
+  `ciudad` varchar(20) NOT NULL,
+  `region` varchar(10) NOT NULL,
+  `dir` char(3) NOT NULL,
+  `objetivo` int(10) NOT NULL,
+  `ventas` int(10) NOT NULL,
+  PRIMARY KEY (`oficina`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+#
+# Data for table "oficinas"
+#
+
+INSERT INTO `oficinas` VALUES ('11','Valencia','este','106',575000,693000),('12','Alicante','este','104',800000,735000),('13','Castellon','este','105',350000,368000),('21','Babajoz','oeste','108',725000,836000),('22','A Coruña','oeste','108',300000,186000),('23','Madrid','centro','108',0,0),('24','Madrid','centro','108',250000,150000),('26','Pamplona','norte','104',0,0),('28','Valencia','este','105',900000,0);
+
+#
+# Structure for table "empleados"
+#
+
+DROP TABLE IF EXISTS `empleados`;
+CREATE TABLE `empleados` (
+  `numemp` char(3) NOT NULL,
+  `nombre` varchar(40) NOT NULL,
+  `edad` int(3) NOT NULL,
+  `oficina` char(2) NOT NULL,
+  `titulo` varchar(20) NOT NULL,
+  `contrato` date NOT NULL,
+  `jefe` char(3) NOT NULL,
+  `cuota` int(10) NOT NULL,
+  `ventas` int(10) NOT NULL,
+  PRIMARY KEY (`numemp`),
+  KEY `oficina` (`oficina`),
+  CONSTRAINT `empleados_ibfk_1` FOREIGN KEY (`oficina`) REFERENCES `oficinas` (`oficina`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+#
+# Data for table "empleados"
+#
+
+INSERT INTO `empleados` VALUES ('101','Antonio Viguer',45,'12','representante','1986-10-20','104',300000,305000),('102','Alvaro Jaumes',48,'21','representante','1986-12-10','108',350000,474000),('103','Juan Rovira',29,'12','representante','1987-03-01','104',275000,286000),('104','Jose Gozalez',33,'12','dir ventas','1987-05-19','106',200000,143000),('105','Vicente Pantalla',37,'13','representante','1988-02-12','104',350000,368000),('106','Luis Antonio',52,'11','dir general','1988-06-14','',275000,299000),('107','jorge Gutierrez',49,'22','representante','1988-11-14','108',300000,186000),('108','Ana Bustamante',62,'21','dir ventas','1989-10-12','106',350000,361000),('109','Maria Sunta',31,'11','representante','1999-10-12','106',300000,392000),('110','Juan Victor',41,'11','representante','1990-01-13','104',0,76000);
+
+#
+# Structure for table "pedidos"
+#
+
+DROP TABLE IF EXISTS `pedidos`;
+CREATE TABLE `pedidos` (
+  `codigo` int(10) NOT NULL,
+  `numpedido` int(10) NOT NULL,
+  `fechapedido` date NOT NULL,
+  `clie` varchar(40) NOT NULL,
+  `rep` char(3) NOT NULL,
+  `fab` char(3) NOT NULL,
+  `producto` char(10) NOT NULL DEFAULT '',
+  `cant` int(10) NOT NULL,
+  `importe` int(10) NOT NULL,
+  PRIMARY KEY (`codigo`),
+  KEY `clie` (`clie`),
+  KEY `rep` (`rep`),
+  CONSTRAINT `pedidos_ibfk_2` FOREIGN KEY (`rep`) REFERENCES `empleados` (`numemp`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`clie`) REFERENCES `clientes` (`numclie`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+#
+# Data for table "pedidos"
+#
+
+INSERT INTO `pedidos` VALUES (1,110036,'1997-01-02','2107','110','aci','4100z',9,22500),(2,110036,'1997-01-02','2117','106','rei','2a44l',7,31500),(3,112963,'1997-05-10','2103','105','aci','41004',28,3276),(4,112968,'1990-01-11','2102','101','aci','41004',34,3978),(5,112975,'1997-02-11','2111','103','rei','2a44g',6,2100),(6,112979,'1989-10-12','2114','108','aci','4100z',6,15000),(7,112983,'1997-05-10','2103','105','aci','41004',6,702),(8,112987,'1997-01-01','2103','105','aci','4100y',11,27500),(9,112989,'1997-01-02','2101','106','fea','114',6,1458),(10,112992,'1990-04-15','2118','108','aci','41002',10,760),(11,112993,'1997-03-10','2106','102','rei','2a45c',24,1896),(12,112997,'1997-04-04','2124','107','bic','41003',1,652),(13,113003,'1997-02-05','2108','109','inm','779c',3,5625),(14,113007,'1997-01-01','2112','108','inm','773c',3,2925),(15,113012,'1997-05-05','2111','105','aci','41003',35,3745),(16,113013,'1997-08-06','2118','108','bic','41003',1,652),(17,113024,'1997-07-04','2114','108','qsa','xk47',20,7100),(18,113027,'1997-02-05','2103','105','aci','41002',54,4104),(19,113034,'1997-11-05','2107','110','rei','2a45c',8,632),(20,113042,'1997-01-01','2113','101','rei','2a44r',5,22500),(21,113045,'1997-07-02','2112','108','rei','2a44r',10,45000),(22,113048,'1997-02-02','2120','102','inm','779c',2,3750),(23,113049,'1997-04-04','2118','108','qsa','xk47',2,776),(24,113051,'1997-04-04','2118','108','qsa','xk47',4,1420),(25,113055,'2009-04-01','2108','101','aci','4100x',6,150),(26,113057,'1997-11-01','2111','103','aci','4100x',24,600),(27,113058,'1989-07-04','2108','109','fea','112',10,1480),(28,113062,'1997-07-04','2124','107','bic','41003',10,2430),(29,113065,'1997-06-03','2106','102','qsa','xk47',6,2130),(30,113069,'1997-08-01','2109','107','inm','773c',22,31350);
+
+#
+# Structure for table "productos"
+#
+
+DROP TABLE IF EXISTS `productos`;
+CREATE TABLE `productos` (
+  `idfab` char(3) NOT NULL,
+  `idproducto` varchar(10) NOT NULL,
+  `descripcion` varchar(30) NOT NULL,
+  `precio` int(10) NOT NULL,
+  `existencias` int(10) NOT NULL,
+  PRIMARY KEY (`idfab`,`idproducto`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+#
+# Data for table "productos"
+#
+
+INSERT INTO `productos` VALUES ('aci','41001','arandela',58,277),('aci','41002','bisagra',80,167),('aci','41003','art t3',112,207),('aci','41004','art t4',123,139),('aci','4100x','junta',26,37),('aci','4100y','extractor',2888,25),('aci','4100z','mont',2625,3),('bic','41003','manivela',652,3),('bic','41089','rodamiento',225,78),('bic','41672','plato',180,0),('fea','112','cubo',148,115),('fea','114','cubo',243,15),('inm','773c','reostato',975,28),('inm','775c','reostato 2',1425,5),('inm','779c','reostato 3',1875,0),('inm','887h','caja clavos',54,223),('inm','887p','perno',25,24),('inm','887x','manivela',475,32),('qsa','xk47','red',355,38),('qsa','xk48','red',134,203),('qsa','xk48a','red',117,37),('rei','2a44g','pas',350,14),('rei','2a44l','bomba l',4500,12),('rei','2a44r','bomba r',4500,12);
