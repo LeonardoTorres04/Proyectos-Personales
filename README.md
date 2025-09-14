@@ -5,18 +5,18 @@ Este repositorio contiene una colección de proyectos personales desarrollados p
 
 ## Lista de proyectos incluidos
 
-- [Proyecto Librería](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto%20Librería)
-- [Proyecto Android Studio](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto%20Android%20Studio)
-- [Proyecto Clínica Odontológica](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto%20Clínica%20Odontológica)
-- [Proyecto de Credit_Approval](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto%20de%20Credit_Approval)
-- [Proyecto ETL y Visualización](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto%20ETL%20y%20Visualización)
-- [Proyecto ETL_Organización](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto%20ETL_Organización)
-- [Proyecto Ferretería SQL](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto%20Ferretería%20SQL)
-- [Proyecto ISP Redes](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto%20ISP%20Redes)
-- [Proyecto Nómina Financiera](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto%20Nómina%20Financiera)
-- [Proyecto Power BI - Comercializadora](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto%20Power%20BI%20-%20Comercializadora)
+- [Proyecto_Librería](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_Librería)
+- [Proyecto_Android_Studio](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_Android_Studio)
+- [Proyecto_Clinica_Odontologica](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_Clinica_Odontologica)
+- [Proyecto_de_Credit_Approval](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_de_Credit_Approval)
+- [Proyecto_ETL_y_Visualizacion](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_ETL_y_Visualizacion)
+- [Proyecto_ETL_Organizacion](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_ETL_Organizacion)
+- [Proyecto_Ferreteria_SQL](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_Ferreteria_SQL)
+- [Proyecto_Isp_Redes](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_Isp_Redes)
+- [Proyecto_Nomina_Financiera](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_Nomina_Financiera)
+- [Proyecto_Power_BI-Comercializadora](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_Power_BI-Comercializadora)
 - [Proyecto_Ecopetrol_Seguimiento](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_Ecopetrol_Seguimiento)
-- [Proyectos varios Python](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyectos%20varios%20Python)
+- [Proyectos_varios_Python](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyectos_varios_Python)
 
 
 Cada proyecto aborda diferentes áreas como desarrollo de software, análisis de datos, automatización, visualización, y más. Para más detalles, consulta el README dentro de cada carpeta.
