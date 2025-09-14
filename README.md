@@ -1,7 +1,7 @@
 
 # Proyectos Personales
 
-Este repositorio contiene una colección de proyectos personales desarrollados por Leonardo. Cada carpeta representa un proyecto independiente con su propio archivo README y estructura de trabajo.
+Este repositorio contiene una colección de proyectos personales desarrollados. Cada carpeta representa un proyecto independiente con su propio archivo README y estructura de trabajo.
 
 ## Lista de proyectos incluidos
 
@@ -21,4 +21,3 @@ Este repositorio contiene una colección de proyectos personales desarrollados p
 
 Cada proyecto aborda diferentes áreas como desarrollo de software, análisis de datos, automatización, visualización, y más. Para más detalles, consulta el README dentro de cada carpeta.
 
-_Última actualización: 14/09/2025_
