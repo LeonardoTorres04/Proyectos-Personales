@@ -5,7 +5,7 @@ Este repositorio contiene una colección de proyectos personales desarrollados p
 
 ## Lista de proyectos incluidos
 
-- [Proyecto_Librería](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_Librería)
+- [Proyecto_Libreria](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_Libreria)
 - [Proyecto_Android_Studio](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_Android_Studio)
 - [Proyecto_Clinica_Odontologica](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_Clinica_Odontologica)
 - [Proyecto_de_Credit_Approval](https://github.com/LeonardoTorres04/Proyectos-Personales/tree/main/Proyecto_de_Credit_Approval)
